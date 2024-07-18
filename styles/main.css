@@ -1,0 +1,157 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url(../assets/custom-font/OpenSans-VariableFont.ttf);
+  }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+body {
+    background-color: #f6f6f6f6;
+}
+
+
+.hero-section-background {
+    position: relative;
+    background: url("../assets/images/hero-section-image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.hero-section-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(26, 61, 90, 0.5); 
+    z-index: 1;
+}
+
+.hero-section-text-container {
+    position: relative;
+    z-index: 2;
+    
+}
+
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    
+}
+nav li {
+    height: 50px;
+    padding: 20px
+}
+
+nav a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+
+
+nav li:hover {
+    background-color: rgba(26, 61, 90, 0.5);
+}
+
+.sidebar {
+    position: fixed;
+    top:0;
+    right: 0;
+    height: 100vh;
+    background-color: rgba(26, 61, 90, .8);
+    backdrop-filter: blur(10px);
+
+    z-index: 10;
+    width: 40%;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: #ffffff;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%
+}
+
+.our-mission-background {
+    position: relative;
+    background: url("../assets/images/our-mission-cover-image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.our-mission-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(26, 61, 90, 0.5); 
+    z-index: 1;
+}
+
+.menu-button {
+    display: none;
+}
+
+@media(max-width: 800px) {
+    .hideMenu {
+        display:none;
+    }
+    .menu-button {
+        display: block;
+    }
+}
+
+@media(max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+.pof-card-item {
+    margin: 20px 18px;
+    padding: 25px;
+    background-color: #ffffff;
+    filter: drop-shadow(0 4px 4px rgba(0,0,0,.25));
+    border-radius: 5px;
+
+}
+
+.pof-card-item h3 {
+    color: #9B171F;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+.pof-card-item p {
+    text-align: justify;
+    font-size: 15px;
+}
+
+
